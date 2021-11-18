@@ -15,10 +15,14 @@ int main()
 	cin >> phepToan;
 	if(phepToan=="-"){
 		hieu(a,b);
+	if(phepToan=="+"){
+		tong(a,b);
 	}
 	system("pause");
 	return 0;
 }
 int hieu(int a, int b){
 	return a-b;
+int tong(int a, int b){
+	return(a+b);
 }
