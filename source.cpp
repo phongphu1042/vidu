@@ -3,9 +3,10 @@ using namespace std;
 int tong(int a, int b);
 int hieu(int a, int b);
 int tich(int a, int b);
+bool ktChanLe(int n);
 int main()
 {
-	int a, b;
+	int a, b, n;
 	char phepToan;
 	cout << "Nhap so nguyen 1: ";
 	cin >> a;
@@ -21,6 +22,13 @@ int main()
 
 	if(phepToan=="*"){
 		tich(a,b);
+	cout << "Nhap so nguyen n: ";
+	cin >> n;
+	if(ktChanLe(n)){
+		cout<<"n la so chan";
+	}
+	else{
+		cout<<"n la so le";
 	}
 	system("pause");
 	return 0;
@@ -36,3 +44,9 @@ int tich(int a, int b){
 	return(a+b);
 }
 //cau19
+bool ktChanLe(int n){
+	if(n%2==0){
+		return true;
+	}
+	return false;
+}
